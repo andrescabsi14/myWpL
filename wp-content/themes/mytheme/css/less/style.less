@@ -1,0 +1,178 @@
+//************************************************************//
+	//Andres E. Cabrera S. - All rights reserved ® 2015//
+	               //www.andrewc.co//
+//************************************************************//
+
+//Media Queries
+//////////////////////////////////////
+@max-desktop:        ~"only screen and (max-width : 1280px)";
+@min-desktop:        ~"only screen and (max-width : 1024px)";
+@max-tablet:   	     ~"only screen and (max-width : 1023px)";
+@min-tablet:	     ~"only screen and (max-width : 768px)";
+@max-movil:    		 ~"only screen and (max-width: 767px)";
+@min-movil:    		 ~"only screen and (max-width: 320px)";
+//Fonts
+//////////////////////////////////////
+
+
+//Colors
+//////////////////////////////////////
+@white: 		#fff;
+@black: 		#000;
+
+//Mixins
+//////////////////////////////////////
+//Absolute Position Center
+.absoluteCenter{
+	position: relative;
+	top: 50%;
+}
+//Flex
+.flexContainer{
+	-ms-display: flex;
+	-moz-display: flex;
+	-webkit-display: flex;
+	display: flex;
+}
+.flexBox1{
+	-ms-flex: 1;
+	-moz-flex: 1;
+	-webkit-flex: 1;
+	flex: 1;
+}
+//Align
+.vertical-align {
+  position: relative;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+//Scale
+//////////////////////////////////////
+@mx-width: 			920px;
+@font-size: 		16px;
+
+//Directories
+//////////////////////////////////////
+@imagePath: 		'../img'; //background: url("@{background}/mybg.png");
+
+//Dark Background
+//////////////////////////////////////
+.dark{
+	color: @white;
+	a{
+		text-decoration: none;
+		transition: all 0.5s ease;
+		color: @white;
+
+		&:hover{
+			color: lighten(@white, 10%);
+		}
+	}
+}
+//Browser Fix
+//////////////////////////////////////
+
+//IE9
+.ie9{
+
+}
+
+//Styles
+//////////////////////////////////////
+
+
+html,
+body{
+	margin: 0;
+	padding: 0;
+}
+body{
+	margin: 0 auto;
+	width: 100%;
+	font-family: Arial, sans-serif;
+	font-size: @font-size;
+	-webkit-font-smoothing: antialiased;
+
+	h1, h2, h3, h4, h5, h6{
+		margin: 0;
+		margin-bottom: 20px;
+	}
+
+	h1{
+		font-size: 5rem;
+		font-weight: 600;
+	}
+	h2{
+		font-size: 4rem;
+		font-weight: 500;
+	}
+	h3{
+		font-size: 3.5rem;
+		font-weight: 500;
+	}
+	h4{
+		font-size: 3rem;
+		font-weight: 400;
+	}
+	h5{
+		font-size: 2.5rem;
+		font-weight: 300;
+	}
+	h6{
+		font-size: 2rem;
+		font-weight: 300;
+	}
+	p{
+		font-size: 1.13rem;
+	}
+	a{
+		text-decoration: none;
+		transition: all 0.5s ease;
+		color: @black;
+
+		&:hover{
+			color: lighten(@black, 10%);
+		}
+	}
+
+	
+
+	header{
+
+		nav{
+
+			ul{
+				list-style: none;
+				li{
+					
+				}
+			}
+		}
+	}
+
+	.container{
+		margin: 0 auto;
+		height: 100%;
+
+		.section{
+			display: block;
+			vertical-align: top;
+			margin: 0 auto;
+
+			.wrapper{
+				margin: 0 auto;
+				max-width: @mx-width;
+				padding: 6% 20px;
+			}
+		}
+	}
+
+	footer{
+		height: 50px;
+		background: @black;
+	}
+}
+
